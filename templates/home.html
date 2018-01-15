@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Recent Posts</h2>
+  {% for post in object_list|slice:":20" %}
+    <div class="post-entry">
+      <h3><a href="{% url 'post_detail' post.pk %}">R{{ post.post_round }}D{{ post.post_day }}: {{ post.title }} by {{ post.author }} on {{ post.date_created }}</a></h3>
+    </div>
+  {% endfor %}
+{% endblock content %}

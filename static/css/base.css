@@ -1,0 +1,172 @@
+/* static/css/base.css */
+body {
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+  color: green;
+  background-color: black;
+}
+
+body a {
+  color: green;
+  text-decoration: none;
+}
+
+body a:hover {
+  color: lime;
+  text-decoration: none;
+}
+
+body h2 {
+  color: lime;
+}
+
+p {
+  color: lime;
+}
+
+header {
+  border-bottom: 1px solid;
+  margin-bottom: 2rem;
+  display: flex;
+  color: green;
+}
+
+header h1 a {
+  color: lime;
+  text-decoration: none;
+  position: relative;
+}
+
+header a {
+  color: green;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: lime;
+  text-decoration: none;
+}
+
+th {
+  text-align: right;
+  width: 10%;
+}
+
+.nav-left {
+  margin-right: auto;
+  font-size: 18px;
+}
+
+.nav-right {
+  font-size: 18px;
+  display: flex;
+  padding-top: 2rem;
+}
+
+.nav-right a {
+  padding: 0.5rem;
+}
+
+.post-entry {
+  margin-bottom: 0.5rem;
+}
+
+.post-entry h3 {
+  margin: .5rem 0;
+}
+
+.post-entry h3 a, .post-entry h3 a:visited {
+  color: green;
+  text-decoration: none;
+}
+
+.post-entry p {
+  margin: 0;
+  font-weight: 400;
+}
+
+.post-entry h3 a:hover {
+  color: lime;
+  text-decoration: none;
+}
+
+input[type="text"], input[type="password"], textarea {
+  background-color: black;
+  color: lime;
+  border: 2px solid green;
+  width: 50%;
+  line-height: 20px;
+  font-size: 0.8em;
+}
+
+input[type="button"], input[type="submit"], button[type="submit"] {
+  background-color: green;
+  color: black;
+  border: none;
+  width: 6em;
+  height: 2em;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+input[type="number"] {
+  background-color: black;
+  color: lime;
+  border: 2px solid green;
+  line-height: 20px;
+  font-size: 0.8em;
+}
+
+select {
+  background-color: green;
+  color: black;
+  border: green;
+}
+
+.button-margin {
+  width: 10%;
+  text-align: right;
+}
+
+.button-row {
+  width: 100%;
+}
+
+.detail-label {
+  color: green;
+}
+
+.cursor {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background: black;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-left: .5em solid;
+
+    -webkit-animation: typing 4s steps(34, end),
+        blinking 1s step-end infinite;
+    animation: typing 4s steps(32=4, end),
+        blinking 1s step-end infinite;
+
+    -webkit-animation-fill-mode: forwards;
+}
+
+/*Change from to 100% to enable typing, 0% to disable */
+@keyframes typing {
+    from { width: 100%; }
+    to { width: 0; }
+}
+
+@-webkit-keyframes blinking {
+    from, to { border-color: transparent; }
+    50% { border-color: lime; }
+}
+
+@keyframes blinking {
+    from, to { border-color: transparent; }
+    50% { border-color: lime; }
+}
