@@ -2,6 +2,11 @@ certifi==2017.11.5
 dj-database-url==0.4.2
 Django==2.0
 gunicorn==19.7.1
+markdown2==2.3.5
+numpy==1.14.0
+pandas==0.22.0
 psycopg2==2.7.3.2
+python-dateutil==2.6.1
 pytz==2017.3
+six==1.11.0
 whitenoise==3.3.1

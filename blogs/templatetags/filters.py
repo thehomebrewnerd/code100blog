@@ -1,7 +1,9 @@
 from datetime import datetime
 from django.template.defaultfilters import timesince
 from django import template
+from django.utils.safestring import mark_safe
 import pytz
+import markdown2
 
 register = template.Library()
 
@@ -19,3 +21,10 @@ def ago(date_time):
         else:
             label = 'days'
         return "{} {} ago".format(diff.days, label)
+
+@register.filter('markdown_to_html')
+def markdown_to_html(markdown_text):
+    '''Converts markdown text to html'''
+    html_body = markdown2.markdown(markdown_text)
+
+    return mark_safe(html_body)

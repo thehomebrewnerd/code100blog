@@ -8,8 +8,8 @@
     <h2>R{{ post.post_round }}D{{ post.post_day }}: {{ post.title }}</h2>
     <p><span class="detail-label">Created: </span>{{ post.date_created|ago }}</p>
     <p><span class="detail-label">Last Update: </span>{{ post.date_updated|ago }}</p>
-    <br><p><span class="detail-label">PROGRESS: </span>{{ post.progress }}</p>
-    <br><p><span class="detail-label">THOUGHTS: </span>{{ post.thoughts }}</p>
+    <br><p><span class="detail-label">PROGRESS: </span>{{ post.progress|markdown_to_html }}</p>
+    <br><p><span class="detail-label">THOUGHTS: </span>{{ post.thoughts|markdown_to_html }}</p>
     <br><p><span class="detail-label">LINK TO WORK: </span><a href="{{ post.work_link}}" target="_blank">{{ post.work_link }}</p>
   </div>
  {% if post.author == request.user %}
