@@ -8,7 +8,7 @@
   {% for post in object_list %}
     {% if post.author.id == request.user.id %}
     <div class="post-entry">
-      <h3><a href="{% url 'post_detail' post.pk %}">R{{ post.post_round }}D{{ post.post_day }}: {{ post.title }} by {{ post.author }} on {{ post.date_created|ago }}</a></h3>
+      <h3><a href="{% url 'post_detail' post.pk %}">R{{ post.post_round }}D{{ post.post_day }}: {{ post.title }} by {{ post.author }}, {{ post.date_created|ago }}</a></h3>
     </div>
     {% endif %}
   {% endfor %}
