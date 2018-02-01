@@ -14,4 +14,8 @@ def ago(date_time):
         span = span.split(",")[0] # just the most significant digit
         return "{} ago".format(span)
     else:
-        return "{} days ago".format(diff.days)
+        if diff.days <= 1:
+            label = 'day'
+        else:
+            label = 'days'
+        return "{} {} ago".format(diff.days, label)
